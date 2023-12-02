@@ -61,6 +61,19 @@ class TestDemoJUnitTest {
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	@Test
 	// i chose @Test for sake of brevity and simplicity.
 	void assertTwoPositivesMuliplyCorrectly() {
@@ -72,6 +85,25 @@ class TestDemoJUnitTest {
 		assertThat(testDemo.addPositive(245, 111)).isEqualTo(356);
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

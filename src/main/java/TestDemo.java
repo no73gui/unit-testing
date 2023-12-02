@@ -17,13 +17,30 @@ public class TestDemo {
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	// specific to positive integer values. straight forward.
 	int multiplyPositive(int a, int b) {
+		// if the parameters passed in are both 1 or more, return the value of those ints multiplied.
 		if (a > 0 && b > 0) {
+			// return
 			return a * b;
 		} else {
+			// if conditional fails, throw new IllegalArgumentException with a message.
+			// IAE is what will be thrown and seen in console, this will allow the user to see the exact exception thats causing the issue. its very specific 
+			// and says illegal arg....not much more to say
 			throw new IllegalArgumentException("Both Parameters Must Be Positive!");
 		}
 	}
+	
+	
+	
+	
+	
 	
 	
 	
