@@ -23,6 +23,7 @@ public class TestDemo {
 	
 	
 	
+	
 	// specific to positive integer values. straight forward.
 	int multiplyPositive(int a, int b) {
 		// if the parameters passed in are both 1 or more, return the value of those ints multiplied.
@@ -36,6 +37,9 @@ public class TestDemo {
 			throw new IllegalArgumentException("Both Parameters Must Be Positive!");
 		}
 	}
+	
+	
+	
 	
 	
 	

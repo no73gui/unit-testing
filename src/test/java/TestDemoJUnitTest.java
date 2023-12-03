@@ -28,7 +28,7 @@ class TestDemoJUnitTest {
 	
 	@ParameterizedTest
 	@MethodSource("com.promineotech.TestDemoJUnitTest#argumentsForAddPositive")
-	// the @CsvSource annotation is responsible for setting test case parameters.
+	// see @CsvSource annotation.
 	void assertThatTwoPositiveNumbersAreAddedCorrectly(int a , int b , int expected , boolean expectException) {
 		
 		 if (!expectException) {
@@ -51,11 +51,11 @@ class TestDemoJUnitTest {
 		// use assertThat() to test the return value from addPositive
 		// testDemo is name of private instance of TestDemo object created at start of this class.
 		// addPos being passed to test object with 2 parameters and an expected outcome. 
-		assertThat(testDemo.multiplyPositive(45, 45)).isEqualTo(2025);
-		assertThat(testDemo.multiplyPositive(6, 7)).isEqualTo(42);
-		assertThat(testDemo.multiplyPositive(1, 234)).isEqualTo(234);
-		assertThat(testDemo.multiplyPositive(12, 155)).isEqualTo(1860);
-		assertThat(testDemo.multiplyPositive(72, 68)).isEqualTo(4896);
+		assertThat(testDemo.addPositive(245, 111)).isEqualTo(356);
+		assertThat(testDemo.addPositive(2, 111)).isEqualTo(113);
+		assertThat(testDemo.addPositive(24, 100)).isEqualTo(124);
+		assertThat(testDemo.addPositive(1, 1)).isEqualTo(2);
+		assertThat(testDemo.addPositive(25, 30)).isEqualTo(55);
 		
 	}
 	
@@ -76,21 +76,15 @@ class TestDemoJUnitTest {
 	
 	@Test
 	// i chose @Test for sake of brevity and simplicity.
-	void assertTwoPositivesMuliplyCorrectly() {
+	void assertTwoPositivesMultiplyCorrectly() {
 		// in the test case for multiply two positives, i used the same assertThat method as above in assertThatTwoPairsOfPositiveNumbersAreAddedCorrectly
-		assertThat(testDemo.addPositive(245, 111)).isEqualTo(356);
-		assertThat(testDemo.addPositive(245, 111)).isEqualTo(356);
-		assertThat(testDemo.addPositive(245, 111)).isEqualTo(356);
-		assertThat(testDemo.addPositive(245, 111)).isEqualTo(356);
-		assertThat(testDemo.addPositive(245, 111)).isEqualTo(356);
 		
+		assertThat(testDemo.multiplyPositive(72, 68)).isEqualTo(4896);
+		assertThat(testDemo.multiplyPositive(12, 155)).isEqualTo(1860);
+		assertThat(testDemo.multiplyPositive(1, 234)).isEqualTo(234);
+		assertThat(testDemo.multiplyPositive(6, 7)).isEqualTo(42);
+		assertThat(testDemo.multiplyPositive(45, 45)).isEqualTo(2025);
 	}
-	
-	
-	
-	
-	
-	
 	
 	
 	
